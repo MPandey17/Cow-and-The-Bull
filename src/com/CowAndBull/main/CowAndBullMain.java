@@ -17,7 +17,7 @@ public class CowAndBullMain {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		// Intorduction
+		// Introduction
 		introduction();
 		// Word DB
 		String[] wordBaseInMain = WordBase.wordBase;
