@@ -16,8 +16,7 @@ public class WordFetcher {
 	 */
 	public static String wordFetcher(String[] wordsToFetchFrom) {
 		// Select a random number
-		/* Integer random = 1 * (int) (Math.random() * 100); */
-		Integer random = 0;
+		Integer random =  (int) (Math.floor(Math.random()*wordsToFetchFrom.length) +1);
 		// Select the word
 		String wordFetched = wordsToFetchFrom[random];
 		// Return the word
