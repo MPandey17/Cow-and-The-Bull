@@ -1,9 +1,9 @@
-package com.CowAndBull.main;
+package com.cowandbull.main;
 
 import java.util.Scanner;
 import java.util.logging.Logger;
 
-import com.CowAndBull.utilities.Common;
+import com.cowandbull.utilities.Common;
 
 public class GetInput {
 

@@ -1,4 +1,4 @@
-package com.CowAndBull.main;
+package com.cowandbull.main;
 
 public class WordBase {
 	public static String[] wordBase = { 
