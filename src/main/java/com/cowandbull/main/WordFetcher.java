@@ -1,4 +1,4 @@
-package com.CowAndBull.main;
+package com.cowandbull.main;
 
 import java.util.logging.Logger;
 
@@ -16,7 +16,7 @@ public class WordFetcher {
 	 */
 	public static String wordFetcher(String[] wordsToFetchFrom) {
 		// Select a random number
-		Integer random =  (int) (Math.floor(Math.random()*wordsToFetchFrom.length) +1);
+		Integer random =  (int) (Math.random() * wordsToFetchFrom.length + 1);
 		// Select the word
 		String wordFetched = wordsToFetchFrom[random];
 		// Return the word

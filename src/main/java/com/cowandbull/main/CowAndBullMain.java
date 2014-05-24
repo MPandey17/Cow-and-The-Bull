@@ -1,8 +1,8 @@
-package com.CowAndBull.main;
+package com.cowandbull.main;
 
 import java.util.logging.Logger;
 
-import com.CowAndBull.utilities.Common;
+import com.cowandbull.utilities.Common;
 
 public class CowAndBullMain {
 
@@ -15,9 +15,8 @@ public class CowAndBullMain {
 			.getName());
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-		// Intorduction
+		// Introduction
 		introduction();
 		// Word DB
 		String[] wordBaseInMain = WordBase.wordBase;
@@ -28,7 +27,7 @@ public class CowAndBullMain {
 		Boolean flag = classObject.subMain(wordBaseInMain);
 
 		if (flag) {
-			// Congrats you won
+			// Congratulations you won!
 			System.out.println("CONGRATULATIONS");
 		} else {
 			// You Lost ; Show the correct word

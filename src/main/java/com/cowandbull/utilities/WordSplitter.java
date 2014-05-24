@@ -1,4 +1,4 @@
-package com.CowAndBull.utilities;
+package com.cowandbull.utilities;
 
 public class WordSplitter {
 
