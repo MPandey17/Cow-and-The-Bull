@@ -1,5 +1,6 @@
 package com.cowandbull.main;
 
+import java.util.List;
 import java.util.logging.Logger;
 
 public class WordFetcher {
@@ -14,11 +15,11 @@ public class WordFetcher {
 	 * @param wordsToFetchFrom
 	 * @return A word selected from word base
 	 */
-	public static String wordFetcher(String[] wordsToFetchFrom) {
+	public static String wordFetcher(List<String> wordsToFetchFrom) {
 		// Select a random number
-		Integer random =  (int) (Math.random() * wordsToFetchFrom.length + 1);
+		Integer random =  (int) (Math.random() * wordsToFetchFrom.size() + 1);
 		// Select the word
-		String wordFetched = wordsToFetchFrom[random];
+		String wordFetched = wordsToFetchFrom.get(random);
 		// Return the word
 		return wordFetched.toUpperCase();
 	}

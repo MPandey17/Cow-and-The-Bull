@@ -1,26 +1,27 @@
 package com.cowandbull.main;
 
+import java.util.List;
 import java.util.logging.Logger;
 
 import com.cowandbull.utilities.Common;
 
 public class CowAndBullMain {
 
+	private static final int MAX_TRIES = 10;
 	static Integer cows = 0;
 	static Integer bulls = 0;
 	static String correctWord = "";
 
 	@SuppressWarnings("unused")
-	private final static Logger LOGGER = Logger.getLogger(CowAndBullMain.class
-			.getName());
+	private final static Logger LOGGER = Logger.getLogger(CowAndBullMain.class.getName());
 
 	public static void main(String[] args) {
 
 		// Introduction
 		introduction();
 		// Word DB
-		String[] wordBaseInMain = WordBase.wordBase;
-
+		List<String> wordBaseInMain = WordBase.getWords();
+		
 		CowAndBullMain classObject = new CowAndBullMain();
 
 		// Call SubMain
@@ -36,7 +37,7 @@ public class CowAndBullMain {
 		}
 	}
 
-	private Boolean subMain(String[] wordBaseInMain) {
+	private Boolean subMain(List<String> wordBaseInMain) {
 		// Fetch Word
 		String wordToGuess = WordFetcher.wordFetcher(wordBaseInMain);
 		correctWord = wordToGuess;
@@ -49,7 +50,7 @@ public class CowAndBullMain {
 
 			GetInput getInput = new GetInput();
 
-			while (index < 10) { /* REPEAT 10 Times */
+			while (index < MAX_TRIES) {
 
 				System.out.println("\n\nChance #" + (index + 1));
 				// Ask user for input
@@ -63,8 +64,7 @@ public class CowAndBullMain {
 				// Display Output
 				System.out.println("Cows :: " + cows + " Bulls :: " + bulls);
 				index++;
-				if (bulls == 4)
-					return true;
+				if (bulls == 4) return true;
 			}
 		} else {
 			subMain(wordBaseInMain);
@@ -95,7 +95,7 @@ public class CowAndBullMain {
 		System.out.println("                     COW & BULL                 ");
 		System.out.println("************************************************");
 		System.out
-				.println("\n\nComputer thinks of a 4 alphabet word and you have to guess it in 10 chances");
+				.format("%n%nComputer thinks of a 4 alphabet word and you have to guess it in %d chances%n", MAX_TRIES);
 		System.out
 				.println("Cow : Alphabet is present in the word that you thought but it is not at the correct position");
 		System.out
